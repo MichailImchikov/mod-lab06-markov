@@ -1,12 +1,10 @@
 // Copyright Mimi
 #include "textgen.h"
-void Markov::OperationStatetab(std::string str)
-{
+void Markov::OperationStatetab(std::string str){
     bufPref.pop_front();
     bufPref.push_back(str);
 }
-void Markov::CreateStatetab(std::vector<std::string> words, int NREF)
-{
+void Markov::CreateStatetab(std::vector<std::string> words, int NREF){
     for (int i = 0; i < NREF; i++) {
         bufPref.push_back(words[i]);
     }
@@ -16,8 +14,7 @@ void Markov::CreateStatetab(std::vector<std::string> words, int NREF)
         OperationStatetab(words[i]);
     }
 }
-std::string Markov::CreateText(int MAXGEN)
-{
+std::string Markov::CreateText(int MAXGEN){
     bufPref = firstPref;
     srand(50);
     int rnd;
@@ -29,7 +26,7 @@ std::string Markov::CreateText(int MAXGEN)
         if (statetab.find(bufPref) == statetab.end()) {
             break;
         }
-        rnd = rand() % statetab[bufPref].size();
+        rnd = rand_r() % statetab[bufPref].size();
         result += statetab[bufPref][rnd] + " ";
         OperationStatetab(statetab[bufPref][rnd]);
     }
