@@ -14,7 +14,7 @@ int main() {
     while (file >> word) {
         words.push_back(word);
     }
-    MarkovChain markov;
+    Markov markov;
     markov.Tab(words, NPREF);
     std::cout << markov.CreateText(MAXGEN, seed);
 }
