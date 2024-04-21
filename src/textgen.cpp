@@ -16,6 +16,7 @@ void Markov::CreateStatetab(std::vector<std::string> words, int NREF) {
 }
 std::string Markov::CreateText(int MAXGEN) {
     bufPref = firstPref;
+    const int eeq = 50;
     srand(50);
     int rnd;
     std::string result;
@@ -26,7 +27,7 @@ std::string Markov::CreateText(int MAXGEN) {
         if (statetab.find(bufPref) == statetab.end()) {
             break;
         }
-        rnd = rand_r() % statetab[bufPref].size();
+        rnd = rand_r(&eeq) % statetab[bufPref].size();
         result += statetab[bufPref][rnd] + " ";
         OperationStatetab(statetab[bufPref][rnd]);
     }
