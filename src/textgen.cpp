@@ -1,5 +1,5 @@
 // Copyright Mimi
-#include "Markov.h"
+#include "textgen.h"
 void Markov::OperationStatetab(std::string str)
 {
     bufPref.pop_front();
