@@ -9,6 +9,7 @@
 #include <iostream>
 class Markov{
  public:
+    const int eeq = 50;
     typedef std::deque<std::string> prefix;
     std::map<prefix, std::vector<std::string> > statetab;
     prefix firstPref;
