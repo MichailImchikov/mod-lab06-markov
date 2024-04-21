@@ -25,7 +25,7 @@ TEST(test3, 2Test) {
     std::vector<std::string>words{ "a", "b", "3", "4", "c" };
     MarkovChain mark;
     mark.CreateStatetab(words, 1);
-    EXPECT_EQ(mark.CreateText(10, 10), "a b 3 4 c ");
+    EXPECT_EQ(mark.CreateText(10), "a b 3 4 c ");
 }
 
 TEST(test4, 3Test) {
@@ -35,7 +35,7 @@ TEST(test4, 3Test) {
     "5", "1"};
     MarkovChain mark;
     mark.CreateStatetab(words, 1);
-    EXPECT_EQ(mark.CreateText(10, 10), "1 2 4 5 2 4 5 1 2 3 ");
+    EXPECT_EQ(mark.CreateText(10), "1 2 4 5 2 4 5 1 2 3 ");
 }
 
 TEST(test5, F4Test) {
@@ -50,5 +50,5 @@ TEST(test5, F4Test) {
     prefix pre{ "one" };
     mark.statetab = state;
     mark.firstPref = pre;
-    EXPECT_EQ(mark.CreateText(10, 10), "one11 TwO1 ");
+    EXPECT_EQ(mark.CreateText(10), "one11 TwO1 ");
 }
