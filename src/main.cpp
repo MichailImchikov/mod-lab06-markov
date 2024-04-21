@@ -16,5 +16,5 @@ int main() {
     }
     Markov markov;
     markov.CreateStatetab(words, NPREF);
-    std::cout << markov.CreateText(MAXGEN, seed);
+    std::cout << markov.CreateText(MAXGEN);
 }
