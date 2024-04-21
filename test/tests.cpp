@@ -1,6 +1,6 @@
 // Copyright 2021 GHA Test Team
 #include <gtest/gtest.h>
-#include "Markov.h"
+#include "textgen.h"
 
 TEST(test1, 1Test) {
     std::vector<std::string>words{ "a", "b", "c"};
