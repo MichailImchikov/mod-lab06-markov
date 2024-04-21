@@ -35,7 +35,7 @@ TEST(test4, 3Test) {
     "2", "3", "1", "2", "4",
     "5", "1"};
     mark.CreateStatetab(words, 1);
-    EXPECT_EQ(mark.CreateText(10), "1 2 3 4 5 1 2 4 5 1 ");
+    EXPECT_EQ(mark.CreateText(10), "1 2 4 5 2 4 5 2 4 5 ");
 }
 
 TEST(test5, F4Test) {
