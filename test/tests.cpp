@@ -23,13 +23,13 @@ TEST(test2, 2Test) {
 
 TEST(test3, 2Test) {
     std::vector<std::string>words{ "a", "b", "3", "4", "c" };
-    MarkovC mark;
+    Markov mark;
     mark.CreateStatetab(words, 1);
     EXPECT_EQ(mark.CreateText(10), "a b 3 4 c ");
 }
 
 TEST(test4, 3Test) {
-    MarkovC mark;
+    Markov mark;
     std::vector<std::string>words{ "1",
     "2", "3", "4", "5",
     "2", "3", "1", "2", "4", 
@@ -39,7 +39,7 @@ TEST(test4, 3Test) {
 }
 
 TEST(test5, F4Test) {
-    MarkovC mark;
+    Markov mark;
     typedef std::deque<std::string> prefix;
     std::map<prefix, std::vector<std::string> > state = {
         { { "two" }, { "OnE23", "oNe" } },
