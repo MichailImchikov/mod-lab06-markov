@@ -7,7 +7,7 @@
 #include<deque>
 #include <iostream>
 class Markov{
-public: 
+ public:
     typedef std::deque<std::string> prefix;
     std::map<prefix, std::vector<std::string> > statetab;
     prefix firstPref;
