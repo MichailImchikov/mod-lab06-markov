@@ -9,7 +9,7 @@
 #include <iostream>
 class Markov{
  public:
-    const unsigned int eeq = 50;
+    unsigned int eeq = 50;
     typedef std::deque<std::string> prefix;
     std::map<prefix, std::vector<std::string> > statetab;
     prefix firstPref;
