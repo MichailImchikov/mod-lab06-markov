@@ -1,4 +1,5 @@
 // Copyright Mimi
+#pragma once
 #include<vector>
 #include<locale>
 #include<string>
