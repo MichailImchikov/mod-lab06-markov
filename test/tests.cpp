@@ -21,7 +21,7 @@ TEST(test2, 2Test) {
     EXPECT_EQ(mark.statetab.begin()->second, suffix);
 }
 
-TEST(test3, 2Test) {
+TEST(test3, 99Test) {
     std::vector<std::string>words{ "a", "b", "3", "4", "c" };
     Markov mark;
     mark.CreateStatetab(words, 1);
