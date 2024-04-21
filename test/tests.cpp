@@ -49,5 +49,5 @@ TEST(test5, F4Test) {
     prefix pre{ "one1" };
     mark.statetab = state;
     mark.firstPref = pre;
-    EXPECT_EQ(mark.CreateText(10), "one11 ");
+    EXPECT_EQ(mark.CreateText(10), "one1 ");
 }
