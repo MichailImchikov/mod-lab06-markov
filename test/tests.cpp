@@ -32,7 +32,7 @@ TEST(test4, 3Test) {
     Markov mark;
     std::vector<std::string>words{ "1",
     "2", "3", "4", "5",
-    "2", "3", "1", "2", "4", 
+    "2", "3", "1", "2", "4",
     "5", "1"};
     mark.CreateStatetab(words, 1);
     EXPECT_EQ(mark.CreateText(10), "1 2 3 4 5 1 2 4 5 1 ");
