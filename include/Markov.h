@@ -1,3 +1,4 @@
+// Copyright Mimi
 #include<vector>
 #include<locale>
 #include<string>
