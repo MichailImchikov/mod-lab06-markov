@@ -1,3 +1,4 @@
+// Copyright Mimi
 #include "Markov.h"
 void Markov::OperationStatetab(std::string str)
 {
